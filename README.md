@@ -4,6 +4,8 @@
   </a>
 </p>
 
+# Quantum SPHINCS+ API Demo
+
 [![License: Academic Non-Commercial](https://img.shields.io/badge/license-Academic%20Non--Commercial-blue)](LICENSE)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15336618.svg)](https://doi.org/10.5281/zenodo.15336618)
 [![Python](https://img.shields.io/badge/Python-3.12-blue.svg)](https://www.python.org/)
