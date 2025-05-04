@@ -1,4 +1,8 @@
-# Quantum SPHINCS+ API Demo
+<p align="left">
+  <a href="https://github.com/brunoleomenezes/quantum_sphincs_api_demo">
+    <img src="assets/logo.png" alt="Quantum SPHINCS+ API Demo logo" width="400"/>
+  </a>
+</p>
 
 [![License: Academic Non-Commercial](https://img.shields.io/badge/license-Academic%20Non--Commercial-blue)](LICENSE)
 [![Python](https://img.shields.io/badge/Python-3.12-blue.svg)](https://www.python.org/)
