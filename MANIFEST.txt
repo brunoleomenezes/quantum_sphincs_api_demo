@@ -1,0 +1,62 @@
+# Project Content Manifest
+
+\================================
+
+**Project:** Quantum SPHINCS+ API Demo
+**Description:** REST API for validating the resilience of the SPHINCS+ digital signature algorithm against simulated quantum attacks using Qiskit, integrating C and Python routines.
+
+**Authors:**
+
+* Bruno Leonardo Santos Menezes (lead author)
+* Franklin de Lima Marquezino
+* Claudio Miceli de Farias
+
+**Version:** 1.0
+**Date:** May 2025
+
+**Included directory structure:**
+
+`/external`
+
+* Official SPHINCS+ code (submodule linked to the original repository).
+* Includes Makefile, C implementation, and headers for key generation, signing, and verification.
+
+`/src/c_tests`
+
+* Unit and integration tests developed in C using CMocka.
+* Includes validation of key generation, signing, edge cases, and quantum resistance.
+
+`/src/quantum_attacks`
+
+* Python scripts using Qiskit.
+* Includes simulations of quantum attacks with GHZ circuits, Grover’s algorithm, and entanglement.
+
+`/requirements.txt`
+
+* Python dependencies for executing quantum attacks and the REST API.
+
+`/Procfile`
+
+* Configuration file for deployment and running the API in environments such as Railway and Heroku.
+
+`/LICENSE`
+
+* Academic Non-Commercial License.
+
+`README.md`
+
+* General project documentation with usage instructions.
+
+`.gitignore` and `.gitmodules`
+
+* Version control files (included to preserve repository integrity).
+
+## **Notes:**
+
+The included files and code are intended solely for scientific and educational demonstration of the robustness of the SPHINCS+ algorithm in simulated quantum attack scenarios.
+
+The project is licensed under an academic and non-commercial license.
+
+**END OF MANIFEST**
+
+---
