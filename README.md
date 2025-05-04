@@ -120,6 +120,8 @@ This project is licensed under the **Academic Non-Commercial License v1.0**. See
 - **Franklin de Lima Marquezino**
 - **Claudio Miceli de Farias**
 
+[DOI: 10.5281/zenodo.15336618](https://doi.org/10.5281/zenodo.15336618)
+
 ---
 
 This project is part of a scientific study focused on the evaluation of post-quantum algorithms and is under continuous development.
