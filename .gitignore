@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+*.o
+*.out
+*.a
+*.so
+*.log
+*.tmp
+*.swp
+build/
