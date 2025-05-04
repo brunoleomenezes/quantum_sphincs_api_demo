@@ -1,0 +1,3 @@
+[submodule "external/sphincsplus"]
+	path = external/sphincsplus
+	url = https://github.com/sphincs/sphincsplus.git
