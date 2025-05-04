@@ -4,16 +4,33 @@ Copyright (c) 2025 Bruno Leonardo Santos Menezes, Franklin de Lima Marquezino, C
 
 Permission is hereby granted, free of charge, to use, copy, modify, and distribute this software and its documentation (the "Software") for non-commercial academic research and teaching purposes only, subject to the following conditions:
 
-1. Usage is strictly limited to non-commercial academic research and teaching activities. Any commercial use, including but not limited to selling, licensing, sublicensing, or commercial distribution, is expressly prohibited without prior written permission from the authors.
+1. Non-Commercial Use Only
+Usage is strictly limited to non-commercial academic research and teaching activities. Any commercial use, including but not limited to selling, licensing, sublicensing, offering services for a fee, or any other commercial advantage or financial gain, is expressly prohibited without prior written permission from the authors.
 
-2. Any publications, presentations, derivative works, or other research outputs using this Software must cite the following source:
+For the purposes of this license, "Non-Commercial Use" means use for research, teaching, or other scholarly purposes which does not involve the provision of a service for a fee, licensing, sale, or other commercial advantage or financial gain. Any other use is considered "Commercial Use".
+
+2. Attribution Requirement
+Any publications, presentations, derivative works, or other research outputs using this Software must cite the following source:
 
 MENEZES, Bruno Leonardo Santos et al. UMA SIMULAÇÃO DE ATAQUE QUÂNTICO AO SPHINCS. In: Anais do SEGeT - Simpósio de Excelência em Gestão e Tecnologia. 2024. Disponível em: https://www.aedb.br/seget/arquivos/artigos24/10335113.pdf.
 
-3. Redistribution of the Software, with or without modification, is permitted only for non-commercial academic research and teaching purposes and must retain this license, copyright notice, and all conditions herein.
+3. Retention of License and Copyright
+Redistribution of the Software, with or without modification, is permitted only for non-commercial academic research and teaching purposes and must retain this license, the above copyright notice, and all conditions herein. The license and attribution notice must not be removed or altered in any distributed copy.
 
-4. Commercial use requests should be directed to:
+4. Prohibition of Sublicensing
+Sublicensing, re-licensing, or otherwise making the Software available under different terms is strictly prohibited.
+
+5. Prohibition of Use in Commercial Machine Learning Training
+Use of this Software for training commercial machine learning models or systems intended for commercial purposes is prohibited without prior written permission.
+
+6. Termination Clause
+Violation of any of the terms and conditions of this license will automatically terminate the rights granted herein.
+
+7. Contact for Commercial Licensing
+Requests for commercial use licenses may be directed to:
 
 menezesbruno@protonmail.com
+
+DISCLAIMER OF WARRANTY
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
