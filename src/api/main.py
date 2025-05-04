@@ -1,7 +1,7 @@
-import os
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI
 from fastapi.responses import JSONResponse
 import subprocess
+import os
 
 app = FastAPI(
     title="Quantum SPHINCS+ API Demo",
@@ -9,12 +9,15 @@ app = FastAPI(
     version="1.0.0"
 )
 
-# Detectar se está em produção ou não (Railway define o env RAILWAY_ENVIRONMENT)
-IS_PRODUCTION = os.getenv("RAILWAY_ENVIRONMENT") is not None
-
+# --- Função auxiliar para executar comandos ---
 def run_command(command, cwd=None):
     try:
-        result = subprocess.run(command, capture_output=True, text=True, cwd=cwd)
+        result = subprocess.run(
+            command,
+            capture_output=True,
+            text=True,
+            cwd=cwd
+        )
         return {
             "command": " ".join(command),
             "stdout": result.stdout,
@@ -24,43 +27,63 @@ def run_command(command, cwd=None):
     except Exception as e:
         return {"error": str(e)}
 
+# --- Descobrir path dinâmico ---
+def get_attack_path():
+    """Define o path correto dos ataques quânticos conforme ambiente (local ou Railway)"""
+    if os.path.exists("src/quantum_attacks"):
+        return os.path.join("src", "quantum_attacks")
+    else:
+        return os.path.join("src", "python")
+
+def get_c_tests_path():
+    """Define o path dos testes em C (não existe no Railway, só local)"""
+    path = os.path.join("src", "c_tests")
+    if os.path.exists(path):
+        return path
+    else:
+        return None
+
+# --- Endpoints ---
+
 @app.get("/")
 def root():
     return {"message": "Quantum SPHINCS+ API online"}
 
 @app.get("/run_c_tests")
 def run_c_tests():
-    """
-    Executa os testes SPHINCS+ em C (Apenas Local)
-    """
-    if IS_PRODUCTION:
-        raise HTTPException(status_code=403, detail="Este endpoint está disponível apenas em ambiente local.")
-    
-    path = os.path.join("src", "c_tests")
+    """Executa os testes SPHINCS+ em C (somente se disponíveis)"""
+    path = get_c_tests_path()
+    if path is None:
+        return JSONResponse(content={"error": "Testes em C não disponíveis neste ambiente."})
+
     result = run_command(["./tests"], cwd=path)
     return JSONResponse(content=result)
 
 @app.get("/run_attack/ghz")
 def run_attack_ghz():
-    path = os.path.join("src", "quantum_attacks")
+    """Executa ataque quântico GHZ"""
+    path = get_attack_path()
     result = run_command(["python", "quantum_attack_ghz.py"], cwd=path)
     return JSONResponse(content=result)
 
 @app.get("/run_attack/4qubits")
 def run_attack_4qubits():
-    path = os.path.join("src", "quantum_attacks")
+    """Executa ataque quântico com 4 qubits"""
+    path = get_attack_path()
     result = run_command(["python", "quantum_attack_4_qubits.py"], cwd=path)
     return JSONResponse(content=result)
 
 @app.get("/run_attack/grover")
 def run_attack_grover():
-    path = os.path.join("src", "quantum_attacks")
+    """Executa ataque quântico Grover"""
+    path = get_attack_path()
     result = run_command(["python", "quantum_attack_grover.py"], cwd=path)
     return JSONResponse(content=result)
 
 @app.get("/run_attack/all")
 def run_all_attacks():
-    path = os.path.join("src", "quantum_attacks")
+    """Executa todos os ataques quânticos sequencialmente"""
+    path = get_attack_path()
     scripts = [
         "quantum_attack_ghz.py",
         "quantum_attack_4_qubits.py",
@@ -78,6 +101,9 @@ def run_all_attacks():
 
     return JSONResponse(content={"results": results})
 
+# ------------------------------------------
+# 🚨 ESSA PARTE É ESSENCIAL para Railway 🚨
+# ------------------------------------------
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 8000))
     import uvicorn
