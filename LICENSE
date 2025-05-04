@@ -1,21 +1,19 @@
-MIT License
+Academic Non-Commercial License v1.0
 
 Copyright (c) 2025 Bruno Leonardo Santos Menezes, Franklin de Lima Marquezino, Claudio Miceli de Farias
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+Permission is hereby granted, free of charge, to use, copy, modify, and distribute this software and its documentation (the "Software") for non-commercial academic research and teaching purposes only, subject to the following conditions:
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+1. Usage is strictly limited to non-commercial academic research and teaching activities. Any commercial use, including but not limited to selling, licensing, sublicensing, or commercial distribution, is expressly prohibited without prior written permission from the authors.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+2. Any publications, presentations, derivative works, or other research outputs using this Software must cite the following source:
+
+MENEZES, Bruno Leonardo Santos et al. UMA SIMULAÇÃO DE ATAQUE QUÂNTICO AO SPHINCS. In: Anais do SEGeT - Simpósio de Excelência em Gestão e Tecnologia. 2024. Disponível em: https://www.aedb.br/seget/arquivos/artigos24/10335113.pdf.
+
+3. Redistribution of the Software, with or without modification, is permitted only for non-commercial academic research and teaching purposes and must retain this license, copyright notice, and all conditions herein.
+
+4. Commercial use requests should be directed to:
+
+menezesbruno@protonmail.com
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
