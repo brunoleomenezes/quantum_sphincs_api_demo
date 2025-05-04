@@ -81,3 +81,11 @@ def run_all_attacks():
         })
     
     return JSONResponse(content={"results": results})
+
+# ------------------------------------------
+# 🚨 ESSA PARTE É ESSENCIAL para Railway 🚨
+# ------------------------------------------
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 8080))  # Railway define a variável PORT automaticamente
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=port)
