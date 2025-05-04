@@ -1,7 +1,7 @@
 
 # Quantum SPHINCS+ API Demo
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![License: Academic Non-Commercial](https://img.shields.io/badge/license-Academic%20Non--Commercial-blue)](LICENSE)
 [![Python](https://img.shields.io/badge/Python-3.12-blue.svg)](https://www.python.org/)
 [![SPHINCS+](https://img.shields.io/badge/SPHINCS%2B-integrated-brightgreen)](https://github.com/sphincs/sphincsplus)
 
