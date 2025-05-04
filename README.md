@@ -1,57 +1,104 @@
 
 # Quantum SPHINCS+ API Demo
 
-Este repositório demonstra a integração entre o algoritmo de assinaturas digitais pós-quânticas **SPHINCS+** e ataques simulados com circuitos quânticos utilizando **Qiskit**. O projeto inclui testes completos, simulações quânticas e integração entre código C e Python.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Python](https://img.shields.io/badge/Python-3.12-blue.svg)](https://www.python.org/)
+[![SPHINCS+](https://img.shields.io/badge/SPHINCS%2B-integrated-brightgreen)](https://github.com/sphincs/sphincsplus)
 
-> Projeto de pesquisa com foco em segurança pós-quântica e avaliação da resiliência de algoritmos hash-based (SPHINCS+) contra ataques quânticos.
+Este repositório demonstra a integração entre o algoritmo de assinaturas digitais pós-quânticas **SPHINCS+** e ataques simulados com circuitos quânticos utilizando **Qiskit**. 
 
-## 📌 Sumário
-- Sobre o Projeto
-- Estrutura do Repositório
-- Como Clonar
-- Preparação do Ambiente
-- Compilando o SPHINCS+
-- Executando os Testes e API
-- Executando as Simulações Quânticas
-- Atualizando o Submódulo SPHINCS+
-- Licença
-- Créditos
+O projeto inclui:
 
-## 📚 Sobre o Projeto
-Com a evolução da computação quântica, algoritmos clássicos de criptografia podem ser comprometidos. O SPHINCS+, baseado em hash e sem estado, surge como alternativa robusta para resistir a tais ataques.
-
-Este projeto realiza:
-- Testes de geração de chaves e assinaturas com SPHINCS+ (em C).
-- Integração com Python via scripts.
-- Execução de ataques simulados com Qiskit (GHZ, Grover e emaranhamento).
-- Verificação da integridade das assinaturas após ataques simulados.
+- 📌 Testes completos do SPHINCS+ com integração em C e Python.
+- 📌 Simulações quânticas para ataque com GHZ, Grover e emaranhamento.
+- 📌 Integração entre execução nativa (C) e scripts de ataque (Python).
+- 📌 Avaliação da integridade das assinaturas após ataques simulados.
 
 ## 📁 Estrutura do Repositório
-(ver documentação acima)
+
+```
+quantum_sphincs_api_demo/
+├── external/                # Submodule SPHINCS+ (https://github.com/sphincs/sphincsplus.git)
+├── src/
+│   ├── c_tests/             # Testes em C com CMocka
+│   └── quantum_attacks/    # Scripts Python com Qiskit para ataques simulados
+├── LICENSE
+├── .gitignore
+└── README.md
+```
 
 ## 🚀 Como Clonar
+
+```bash
 git clone --recurse-submodules https://github.com/brunoleomenezes/quantum_sphincs_api_demo.git
 cd quantum_sphincs_api_demo
+```
 
 ## ⚙️ Preparação do Ambiente
-(ver documentação acima)
+
+### Dependências
+
+- GCC
+- Python 3.12
+- Qiskit
+- CMocka
+- OpenSSL
+
+Em sistemas baseados em Fedora (exemplo do estudo):
+
+```bash
+sudo dnf install gcc python3 python3-devel cmocka-devel openssl-devel
+pip install qiskit
+```
 
 ## 🛠️ Compilando o SPHINCS+
-(ver documentação acima)
 
-## ✅ Executando os Testes e API
-(ver documentação acima)
+Entre na pasta `external/sphincsplus` e compile:
+
+```bash
+cd external/sphincsplus/ref
+make
+```
+
+## ✅ Executando os Testes em C
+
+Na pasta raiz:
+
+```bash
+cd src/c_tests
+make
+./tests
+```
 
 ## 🧪 Executando as Simulações Quânticas
-(ver documentação acima)
+
+Os scripts estão em `src/quantum_attacks`:
+
+```bash
+cd src/quantum_attacks
+python quantum_attack_ghz.py
+python quantum_attack_4_qubits.py
+python quantum_attack_grover.py
+```
 
 ## 🔄 Atualizando o Submódulo SPHINCS+
-(ver documentação acima)
+
+```bash
+git submodule update --remote --merge
+git add .gitmodules external/sphincsplus
+git commit -m "Atualiza submodule SPHINCS+"
+git push origin main
+```
 
 ## 📜 Licença
-MIT
+
+Este projeto é licenciado sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para detalhes.
 
 ## 👨‍💻 Créditos
-- Bruno Leonardo Santos Menezes 
-- Franklin de Lima Marquezino 
-- Claudio Miceli de Farias 
+
+- **Bruno Leonardo Santos Menezes**
+- **Franklin de Lima Marquezino**
+- **Claudio Miceli de Farias**
+
+---
+Este projeto é parte de um estudo científico para avaliação de algoritmos pós-quânticos e encontra-se em desenvolvimento contínuo.
