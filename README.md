@@ -41,7 +41,7 @@ git clone --recurse-submodules https://github.com/brunoleomenezes/quantum_sphinc
 cd quantum_sphincs_api_demo
 ```
 
-## ⚙Environment Setup
+## Environment Setup
 
 ### Dependencies
 
