@@ -15,13 +15,13 @@ This repository demonstrates the integration of the post-quantum digital signatu
 
 The project includes:
 
-- 📌 Comprehensive SPHINCS+ tests integrated in C and Python.
-- 📌 Quantum simulations for attacks using GHZ states, Grover's algorithm, and entanglement.
-- 📌 Seamless integration between native execution (C) and attack scripts (Python).
-- 📌 Evaluation of signature integrity after simulated quantum attacks.
-- 📌 A ready-to-use REST API for local or cloud automation.
+- Comprehensive SPHINCS+ tests integrated in C and Python.
+- Quantum simulations for attacks using GHZ states, Grover's algorithm, and entanglement.
+- Seamless integration between native execution (C) and attack scripts (Python).
+- Evaluation of signature integrity after simulated quantum attacks.
+- A ready-to-use REST API for local or cloud automation.
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```
 quantum_sphincs_api_demo/
@@ -34,14 +34,14 @@ quantum_sphincs_api_demo/
 └── README.md
 ```
 
-## 🚀 Cloning the Repository
+## Cloning the Repository
 
 ```bash
 git clone --recurse-submodules https://github.com/brunoleomenezes/quantum_sphincs_api_demo.git
 cd quantum_sphincs_api_demo
 ```
 
-## ⚙️ Environment Setup
+## ⚙Environment Setup
 
 ### Dependencies
 
@@ -58,14 +58,14 @@ sudo dnf install gcc python3 python3-devel cmocka-devel openssl-devel
 pip install qiskit
 ```
 
-## 🛠️ Compiling SPHINCS+
+## Compiling SPHINCS+
 
 ```bash
 cd external/sphincsplus/ref
 make
 ```
 
-## ✅ Running C Tests (Locally)
+## Running C Tests (Locally)
 
 ```bash
 cd src/c_tests
@@ -73,7 +73,7 @@ make
 ./tests
 ```
 
-## 🧪 Running Quantum Simulations (Locally)
+## Running Quantum Simulations (Locally)
 
 ```bash
 cd src/quantum_attacks
@@ -82,7 +82,7 @@ python quantum_attack_4_qubits.py
 python quantum_attack_grover.py
 ```
 
-## 🌐 API for Integration and Automation
+## API for Integration and Automation
 
 This project provides a **complete REST API**.
 
@@ -101,7 +101,7 @@ This project provides a **complete REST API**.
 curl https://your-domain-or-railway.app/run_attack/ghz
 ```
 
-## 🔄 Updating the SPHINCS+ Submodule
+## Updating the SPHINCS+ Submodule
 
 ```bash
 git submodule update --remote --merge
@@ -110,11 +110,11 @@ git commit -m "Update SPHINCS+ submodule"
 git push origin main
 ```
 
-## 📜 License
+## License
 
 This project is licensed under the **Academic Non-Commercial License v1.0**. See the [LICENSE](LICENSE) file for details.
 
-## 👨‍💻 Credits
+## Credits
 
 - **Bruno Leonardo Santos Menezes**
 - **Franklin de Lima Marquezino**
