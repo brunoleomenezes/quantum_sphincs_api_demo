@@ -11,15 +11,14 @@
 [![Python](https://img.shields.io/badge/Python-3.12-blue.svg)](https://www.python.org/)
 [![SPHINCS+](https://img.shields.io/badge/SPHINCS%2B-integrated-brightgreen)](https://github.com/sphincs/sphincsplus)
 
-This repository demonstrates the integration of the post-quantum digital signature algorithm **SPHINCS+** with simulated quantum circuit attacks using **Qiskit**.
+This repository demonstrates the integration of the **SPHINCS+** post-quantum digital signature algorithm with simulated quantum attacks using **Qiskit**.
 
 The project includes:
 
-- Comprehensive SPHINCS+ tests integrated in C and Python.
-- Quantum simulations for attacks using GHZ states, Grover's algorithm, and entanglement.
-- Seamless integration between native execution (C) and attack scripts (Python).
-- Evaluation of signature integrity after simulated quantum attacks.
-- A ready-to-use REST API for local or cloud automation.
+- Quantum circuit simulations using GHZ states, Grover’s algorithm, and entanglement.
+- Seamless integration between native C execution and Python scripting.
+- Evaluation of signature integrity in quantum simulation contexts.
+- A ready-to-use REST API for automation in local or cloud environments.
 
 ## Repository Structure
 
@@ -28,7 +27,7 @@ quantum_sphincs_api_demo/
 ├── external/                # SPHINCS+ Submodule (https://github.com/sphincs/sphincsplus.git)
 ├── src/
 │   ├── c_tests/             # C tests with CMocka
-│   └── quantum_attacks/    # Python scripts with Qiskit for simulated quantum attacks
+│   └── quantum_attacks/    # Python scripts with Qiskit
 ├── LICENSE
 ├── .gitignore
 └── README.md
@@ -90,15 +89,15 @@ This project provides a **complete REST API**.
 |--------|----------|-------------|
 | GET | `/` | Checks if the API is online |
 | GET | `/run_c_tests` | Runs SPHINCS+ C tests locally |
-| GET | `/run_attack/ghz` | Runs GHZ quantum attack |
-| GET | `/run_attack/4qubits` | Runs 4-qubit quantum attack |
-| GET | `/run_attack/grover` | Runs Grover's quantum attack |
-| GET | `/run_attack/all` | Runs all quantum attacks |
+| GET | `/run_attack/ghz` | Runs GHZ |
+| GET | `/run_attack/4qubits` | Runs 4-qubit |
+| GET | `/run_attack/grover` | Runs Grover's  |
+| GET | `/run_attack/all` | Runs all |
 
 #### CURL Example
 
 ```bash
-curl https://your-domain-or-railway.app/run_attack/ghz
+curl https://your-domain-or-railway.app/run/ghz
 ```
 
 ## Updating the SPHINCS+ Submodule
