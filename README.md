@@ -11,7 +11,7 @@
 [![Python](https://img.shields.io/badge/Python-3.12-blue.svg)](https://www.python.org/)
 [![SPHINCS+](https://img.shields.io/badge/SPHINCS%2B-integrated-brightgreen)](https://github.com/sphincs/sphincsplus)
 
-This repository demonstrates the integration of the **SPHINCS+** post-quantum digital signature algorithm with simulated quantum attacks using **Qiskit**.
+This repository demonstrates the integration of the SPHINCS+ post-quantum digital signature algorithm with quantum circuit simulations using Qiskit
 
 The project includes:
 
