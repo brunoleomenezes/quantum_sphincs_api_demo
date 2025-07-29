@@ -75,10 +75,10 @@ make
 ## Running Quantum Simulations (Locally)
 
 ```bash
-cd src/quantum_attacks
-python quantum_attack_ghz.py
-python quantum_attack_4_qubits.py
-python quantum_attack_grover.py
+cd src/quantum_codes
+python quantum_simulation_ghz.py
+python quantum_simulation_4_qubits.py
+python quantum_simulation_grover.py
 ```
 
 ## API for Integration and Automation
