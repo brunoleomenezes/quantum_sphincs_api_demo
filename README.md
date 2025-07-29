@@ -89,10 +89,10 @@ This project provides a **complete REST API**.
 |--------|----------|-------------|
 | GET | `/` | Checks if the API is online |
 | GET | `/run_c_tests` | Runs SPHINCS+ C tests locally |
-| GET | `/run_attack/ghz` | Runs GHZ |
-| GET | `/run_attack/4qubits` | Runs 4-qubit |
-| GET | `/run_attack/grover` | Runs Grover's  |
-| GET | `/run_attack/all` | Runs all |
+| GET | `/run_codes/ghz` | Runs GHZ |
+| GET | `/run_codes/4qubits` | Runs 4-qubit |
+| GET | `/run_codes/grover` | Runs Grover's  |
+| GET | `/run_codes/all` | Runs all |
 
 #### CURL Example
 
