@@ -63,21 +63,21 @@ def run_c_tests():
 def run_attack_ghz():
     """Executa ataque quântico GHZ"""
     path = get_attack_path()
-    result = run_command(["python", "quantum_attack_ghz.py"], cwd=path)
+    result = run_command(["python", "quantum_simulation_ghz.py"], cwd=path)
     return JSONResponse(content=result)
 
 @app.get("/run_attack/4qubits")
 def run_attack_4qubits():
     """Executa ataque quântico com 4 qubits"""
     path = get_attack_path()
-    result = run_command(["python", "quantum_attack_4_qubits.py"], cwd=path)
+    result = run_command(["python", "quantum_simulation_4_qubits.py"], cwd=path)
     return JSONResponse(content=result)
 
 @app.get("/run_attack/grover")
 def run_attack_grover():
     """Executa ataque quântico Grover"""
     path = get_attack_path()
-    result = run_command(["python", "quantum_attack_grover.py"], cwd=path)
+    result = run_command(["python", "quantum_simulation_grover.py"], cwd=path)
     return JSONResponse(content=result)
 
 @app.get("/run_attack/all")
@@ -85,9 +85,9 @@ def run_all_attacks():
     """Executa todos os ataques quânticos sequencialmente"""
     path = get_attack_path()
     scripts = [
-        "quantum_attack_ghz.py",
-        "quantum_attack_4_qubits.py",
-        "quantum_attack_grover.py"
+        "quantum_simulation_ghz.py",
+        "quantum_simulation_4_qubits.py",
+        "quantum_simulation_grover.py"
     ]
 
     results = []
