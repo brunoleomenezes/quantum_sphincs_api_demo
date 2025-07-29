@@ -29,9 +29,9 @@ def run_command(command, cwd=None):
 
 # --- Descobrir path dinâmico ---
 def get_attack_path():
-    """Define o path correto dos ataques quânticos conforme ambiente (local ou Railway)"""
+    """Define o path correto dos códigos quânticos conforme ambiente (local ou Railway)"""
     if os.path.exists("src/quantum_attacks"):
-        return os.path.join("src", "quantum_attacks")
+        return os.path.join("src", "quantum_codes")
     else:
         return os.path.join("src", "python")
 
