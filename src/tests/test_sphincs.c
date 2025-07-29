@@ -303,10 +303,10 @@ static void test_quantum_resistance(void **state) {
 
 	/* Lista de scripts (circuitos quânticos) a serem executados */
 	const char* simulation_scripts[] = {
-    	"../test/quantum_simulation_2.py",
-    	"../test/quantum_simulation_ghz.py",
-    	"../test/quantum_simulation_4_qubits.py",
-    	"../test/quantum_simulation_grover.py"
+    	"../python/quantum_simulation_2.py",
+    	"../python/quantum_simulation_ghz.py",
+    	"../python/quantum_simulation_4_qubits.py",
+    	"../python/quantum_simulation_grover.py"
 	};
 
 	const int num_attacks = sizeof(simulation_scripts) / sizeof(simulation_scripts[0]);
